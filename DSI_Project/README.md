@@ -43,7 +43,7 @@
    
 ### Notebooks:
 - 1. Data Gathering
-    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/1.1. Data Gathering and Cleaning 1.ipynb)
+    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_1.ipynb)
     - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_5.ipynb)
 - 2. Data Exploration
     - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/tree/master/EDA_2.ipynb)
