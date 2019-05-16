@@ -42,28 +42,28 @@
    
    
 ### Notebooks:
-- [1. Data Gathering](.ipynb)
-    - [1.1. Data Gathering and Cleaning 1]()
-    - [1.2. Data Gathering and Cleaning 2]()
-- [](https://git.generalassemb.ly/iceberg/DSI-Client-Project/blob/master/02.1_Data_Cleaning_Tweets.ipynb)
-- [2. Data Exploration](.ipynb)
-    - [2.1. EDA 1]()
-    - [2.2. EDA 2]()
-- [3. Unsupervised Learning]
-    - [3.1. Topic Modeling with Gensim]()
-    - [3.2. Topic Modeling with Sckit-learn]()
-- [4. Modeling and Evaluation]()
-    - [4.1. Preprocessing]
-    - [4.2. Neural Networks]()
-    - [4.3. Logistic Regression]()
+- 1. Data Gathering
+    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_Cleaning_Districts.ipynb)
+    - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_5.ipynb)
+- 2. Data Exploration
+    - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/tree/master/EDA_2.ipynb)
+    - [2.2. EDA 2](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Model_EDA_District.ipynb)
+- 3. Unsupervised Learning
+    - [3.1. Topic Modeling with Gensim](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Modeling_Gensim-District.ipynb)
+    - [3.2. Topic Modeling with Sckit-learn](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Modeling_Sklearn_District.ipynb)
+- 4. Modeling and Evaluation
+    - [4.1. Preprocessing](https://github.com/iceberg425/NLP_Projects/tree/master/Preprocessing.ipynb)
+    - [4.2. Neural Networks](https://github.com/iceberg425/NLP_Projects/tree/master/Predicting_Interest_Rates_with_Text.ipynb)
+    - [4.3. Logistic Regression](https://github.com/iceberg425/NLP_Projects/tree/master/Predicting_Interest_Rates_with_Text.ipynb)
 
 TL;DR
 
 ### Data Gathering
 
    The data was gathered from two sources:
-       - [Federal Reserve Bank of Minneapolis](https://www.minneapolisfed.org/news-and-events/beige-book-archive)
-       - [Macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart)
+   + [Federal Reserve Bank of Minneapolis](https://www.minneapolisfed.org/news-and-events/beige-book-archive)
+       
+   + [Macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart)
        
    The first was scraped using Beautiful soup. We collected text documents from January 1970 up until April 2019, for each Federal Reserve bank district. This resulted in 5148 observations (documents).
     
