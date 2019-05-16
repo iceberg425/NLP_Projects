@@ -13,11 +13,11 @@
 
 ## Executive Summary
 
-   In the wake of the Stock Market Crash of 1987, one of the most compelling questions for the nation's economy was how the Federal Reserve might react. Would the Federal Open Market Committee (FOMC)—the policymaking arm of the Fed—inject more money into the economy? Was such a loosening of monetary policy justified? Was a "wait-and-see" attitude more prudent? Reliable economic statistics would not be available for weeks or months; still, policymakers needed to determine what, indeed, was going on with the economy in the days following the Crash. On what information would the Fed base its decision making? 
+   The Stock Market Crash of 1987 raised some questions about how the Federal Reserve would respond. "Would the Federal Open Market Committee (FOMC) inject more money into the economy?" "Was such an expansionary monetary policy justified?" "Was a "wait-and-see" attitude more prudent?" Since reliable economic statistics would not be immediately available, policymakers needed to determine the state of the economy in the days following the Crash. The question then was: "on what information would the Fed base its decision making?" 
 
-   A November 1987 Business Week article provided an answer: "Thousands of ... tidbits have poured into the Federal Reserve System's Washington headquarters since Bloody Monday. ... The regional Feds survey businesses in their districts, tapping more than 300 members of various Fed boards, as well as hundreds of informal contacts, to compile the 'Beige Book' on regional business conditions. ... Even 'eyeball evidence'—like Minneapolis Fed President Gary H. Stern's car counts at the local malls—go into the information stream."
+   A Businessweek article from the same year provided an answer: "Thousands of ... tidbits have poured into the Federal Reserve System's Washington headquarters since Bloody Monday. ... The regional Feds survey businesses in their districts, tapping more than 300 members of various Fed boards, as well as hundreds of informal contacts, to compile the 'Beige Book' on regional business conditions. ... Even 'eyeball evidence'—like Minneapolis Fed President Gary H. Stern's car counts at the local malls—go into the information stream."
     
-   This was the introduction of the Beige book. The Beige Book is a largely anecdotal compilation of economic reports from each Federal Reserve district, from which a national summary is then drawn, and which is submitted to the Federal Reserve Board and released to the public two weeks prior to FOMC meetings, or eight times a year. The Beige Book is just one piece of information used in the making of monetary policy; the FOMC relies most heavily on forecasts generated from national models and on more current data and information than the Beige Book contains. Still, the release of this document prompts many to search for clues to Fed policy amid the mostly matter-of-fact recitation of current economic conditions. But is such faith in the prophetic powers of the Beige Book justified? Also, how did such a document develop and how did it come to take on such importance?
+   This artcile was the public's introduction to the Beige book. The Beige Book is an "anecdotal compilation of economic reports from each Federal Reserve district, from which a national summary is then drawn, and which is submitted to the Federal Reserve Board and released to the public two weeks prior to FOMC meetings, or eight times a year." It should be noted that the Beige Book is *only* one piece of information used in the making of monetary policy; the FOMC relies most heavily on macroeconomic forecasts and on more current data. Still, the release of this document prompts market participants to search for clues to Fed policy. But is such faith in the "prophetic powers" of the Beige Book justified? Also, how did such a document develop and how did it come to take on such importance?
    
    We do not attempt to answer these questions here (they are beyond the scope of this project). Rather we seek to answer the question: *do the contents of the Beige book inform Fed policy? More precisely, does its content affect interest rate movements?* 
    
@@ -43,7 +43,7 @@
    
 ### Notebooks:
 - 1. Data Gathering
-    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_Cleaning_Districts.ipynb)
+    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/1.1. Data Gathering and Cleaning 1.ipynb)
     - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_5.ipynb)
 - 2. Data Exploration
     - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/tree/master/EDA_2.ipynb)
@@ -65,7 +65,16 @@ TL;DR
        
    + [Macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart)
        
-   The first was scraped using Beautiful soup. We collected text documents from January 1970 up until April 2019, for each Federal Reserve bank district. This resulted in 5148 observations (documents).
+   The first was scraped using Beautiful soup. We collected text documents from January 1970 up until April 2019, for each Federal Reserve bank district. The Beige Book summarizes this information by District and sector. An overall summary of the twelve district reports is prepared by a designated Federal Reserve Bank on a rotating basis. The final outcome is 5148 observations (documents). 
+   The second was downloaded as a csv from [macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart). 
+   The availability of a timestamp each observation allowed us to map both datasets into a unified dataset. As pointed out above, due to the size of the data directory, we have excluded the file from the repo; however, the dataset is available upon request. 
+   
+### Data Exploration
+
+   We explore the data at three levels. First, we explore a sample (the national summary). The national beige book is a summary of the economic conditions gathered for all 12 Fed districts. Then, we proceed to do a full exploration of the full text before embarking on the topic modeling and predictive modeling. Finally, we explore the quantitative data for missing data, its distributions, etc.
+   
+### 
+    
     
    
    
