@@ -42,19 +42,19 @@
    
    
 ### Notebooks:
-- 1. Data Gathering
-    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_1.ipynb)
-    - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/tree/master/Data_Gathering_and_Cleaning_5.ipynb)
-- 2. Data Exploration
-    - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/tree/master/EDA_2.ipynb)
-    - [2.2. EDA 2](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Model_EDA_District.ipynb)
-- 3. Unsupervised Learning
-    - [3.1. Topic Modeling with Gensim](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Modeling_Gensim-District.ipynb)
-    - [3.2. Topic Modeling with Sckit-learn](https://github.com/iceberg425/NLP_Projects/tree/master/Topic_Modeling_Sklearn_District.ipynb)
-- 4. Modeling and Evaluation
-    - [4.1. Preprocessing](https://github.com/iceberg425/NLP_Projects/tree/master/Preprocessing.ipynb)
-    - [4.2. Neural Networks](https://github.com/iceberg425/NLP_Projects/tree/master/Predicting_Interest_Rates_with_Text.ipynb)
-    - [4.3. Logistic Regression](https://github.com/iceberg425/NLP_Projects/tree/master/Predicting_Interest_Rates_with_Text.ipynb)
+1. Data Gathering
+    - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Data_Gathering_and_Cleaning_1.ipynb)
+    - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/blob/master/Data_Gathering_and_Cleaning_5.ipynb)
+2. Data Exploration
+    - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/blob/master/EDA_2.ipynb)
+    - [2.2. EDA 2](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Model_EDA_District.ipynb)
+3. Unsupervised Learning
+    - [3.1. Topic Modeling with Gensim](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Modeling_Gensim-District.ipynb)
+    - [3.2. Topic Modeling with Sckit-learn](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Modeling_Sklearn_District.ipynb)
+4. Modeling and Evaluation
+    - [4.1. Preprocessing](https://github.com/iceberg425/NLP_Projects/blob/master/Preprocessing.ipynb)
+    - [4.2. Neural Networks](https://github.com/iceberg425/NLP_Projects/blob/master/Predicting_Interest_Rates_with_Text.ipynb)
+    - [4.3. Logistic Regression](https://github.com/iceberg425/NLP_Projects/blob/master/Predicting_Interest_Rates_with_Text.ipynb)
 
 TL;DR
 
