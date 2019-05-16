@@ -1,7 +1,7 @@
-# Topic Modeling and Deep Learning 
+# NLP Project: Topic Modeling with Gensim and Sckit-learn.  
 
 
-<img src="./images/wordcloud_1.png" alt="drawing" width="800"/>
+![alt text](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Images/wordcloud_1pnoun.png "Logo Title Text 1")
 
 ## Problem Statement
 
@@ -44,17 +44,17 @@
 ### Notebooks:
 1. Data Gathering
     - [1.1. Data Gathering and Cleaning 1](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Data_Gathering_and_Cleaning_1.ipynb)
-    - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/blob/master/Data_Gathering_and_Cleaning_5.ipynb)
+    - [1.2. Data Gathering and Cleaning 2](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Data_Gathering_and_Cleaning_5.ipynb)
 2. Data Exploration
-    - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/blob/master/EDA_2.ipynb)
-    - [2.2. EDA 2](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Model_EDA_District.ipynb)
+    - [2.1. EDA 1](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/EDA_2.ipynb)
+    - [2.2. EDA 2](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Topic_Model_EDA_District.ipynb)
 3. Unsupervised Learning
-    - [3.1. Topic Modeling with Gensim](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Modeling_Gensim-District.ipynb)
-    - [3.2. Topic Modeling with Sckit-learn](https://github.com/iceberg425/NLP_Projects/blob/master/Topic_Modeling_Sklearn_District.ipynb)
+    - [3.1. Topic Modeling with Gensim](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Topic_Modeling_Gensim-District.ipynb)
+    - [3.2. Topic Modeling with Sckit-learn](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Topic_Modeling_Sklearn_District.ipynb)
 4. Modeling and Evaluation
-    - [4.1. Preprocessing](https://github.com/iceberg425/NLP_Projects/blob/master/Preprocessing.ipynb)
-    - [4.2. Neural Networks](https://github.com/iceberg425/NLP_Projects/blob/master/Predicting_Interest_Rates_with_Text.ipynb)
-    - [4.3. Logistic Regression](https://github.com/iceberg425/NLP_Projects/blob/master/Predicting_Interest_Rates_with_Text.ipynb)
+    - [4.1. Preprocessing](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Preprocessing.ipynb)
+    - [4.2. Non-Parametric Modeling](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Predicting_Interest_Rates_with_Text.ipynb)
+    - [4.3. Parametric Modeling](https://github.com/iceberg425/NLP_Projects/blob/master/DSI_Project/Predicting_Interest_Rates_with_Text.ipynb)
 
 TL;DR
 
@@ -69,20 +69,78 @@ TL;DR
    The second was downloaded as a csv from [macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart). 
    The availability of a timestamp each observation allowed us to map both datasets into a unified dataset. As pointed out above, due to the size of the data directory, we have excluded the file from the repo; however, the dataset is available upon request. 
    
+   
+  #### Data Dictionary
+  
+   | Variable Name           | Data Type      | Description        |
+   |------------------------|-------------|------------------------------|
+   |district_report   | string  | Fed commentary on current economic conditions by district |
+   |date    | string | timestamp of average interest rates and release dates of the Beige book |
+   |rate   | continuous | The 10 year treasury based on the daily yield curve rate released daily |
+      
+      
+      
+      
+   
 ### Data Exploration
 
    We explore the data at three levels. First, we explore a sample (the national summary). The national beige book is a summary of the economic conditions gathered for all 12 Fed districts. Then, we proceed to do a full exploration of the full text before embarking on the topic modeling and predictive modeling. Finally, we explore the quantitative data for missing data, its distributions, etc.
    
-### 
+   After exploring the data, we prepare it for modeling. Since words are not independent of the sentences from which they emmanate, we employ lemmatization, parts of speech tagging, bigrams and trigrams to the text to obtain context for both the topic model and the predictive models.
+   
+### Modeling and Evaluation
+
+   To tackle this problem we take two broad approaches:
+       1. An unsupervised learning approach
+       2. A supervised learning approach
+   
+   The unsupervised learning part of this project employed an LDA model. We implemented this model using both the Gensim and Sckit-learn libraries. Both yield similar results; that is, similar keywords were returned for each topic. We find that the optimal number of topics `n_components` is five. This was arrived at through a grid search and also looping over different coherence scores. The keywords that arise from this analysis suggest the following topics:
+       1. The Primary sector
+       2. Retail and Wholesale sectors
+       3. Consumer Spending and Business Conditions
+       4. Delinquency Rate
+       5. Small Businesses
+
+   The supervised learning part of this project involved predicting interest rate movements; that is, did the interest rate increase or decrease on average? To tackle this we train a Neural Network model with and without GloVe embeddings. We then proceed to add a time dimension and model the data as timeseries. Finally, we regularize these models using the dropout method.
+   
+   We are aware that these kind of models are prone to overfitting. We, therefore, turn to a less flexible model that ensure that we are capture any noise. The logistic regression model (Naive Bayes model) used does not perform any better than our non-parametric methods. 
+   
+   Our findings suggest that predicting interest rate movements may require more **X** features. That is, our model may not include other variables that account for the variation in our dependent variable. To conduct the modeling we employ both parametric and non-parametric models. 
+   
+### Next Steps
+
+   We propose three directions that this work could take:
+   1. **Clustering analysis:** A Hierarchical Clustering algorithm can be employed to build nested clusters by merging or splitting them successively.
+   2. **Incoporating additional predictors:** Modeling of interest rates have their roots in macroeconomics. A review of the literature should be conducted to identify potential predcitors of interest rates.
+   3. **Panel Data Approach:** It would be interesting to observe within and between variation. Our analysis implicitly assumes that these districts are homogenous. This is not the case in reality. We may want to loosen this assumption and incorporate heterogeneity into our model. 
+   
     
     
+### Citations
+
+[“10 Year Treasury Rate - 54 Year Historical Chart.” MacroTrends, 14 May 2019, www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart.
+](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart)
+
+[“Beige Book Archive.” Federal Reserve Bank of Minneapolis, 'www.minneapolisfed.org/news-and-events/beige-book-archive.
+](https://www.minneapolisfed.org/news-and-events/beige-book-archive)
+
+[Chollet, Francois. Deep Learning with Python. Manning, 2018.
+](https://www.manning.com/books/deep-learning-with-python)
+
+[“Consumer Spending.” U.S. Bureau of Economic Analysis (BEA), www.bea.gov/resources/learning-center/what-to-know-consumer-spending.
+](www.bea.gov/resources/learning-center/what-to-know-consumer-spending)
+
+[Fettig, David. “The Federal Reserve's Beige Book: A Better Mirror than Crystal Ball.” Federal Reserve Bank of Minneapolis, 1 Mar. 1999, www.minneapolisfed.org/publications/the-region/the-federal-reserves-beige-book-a-better-mirror-than-crystal-ball.
+](https://www.minneapolisfed.org/publications/the-region/the-federal-reserves-beige-book-a-better-mirror-than-crystal-ball)
+
+[James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R. Springer, 2017.
+](http://www-bcf.usc.edu/~gareth/ISL/)
    
-   
-   
-   
-   
-   
-   
+[Kenton, Will. “Wholesale Trade.” Investopedia, Investopedia, 12 Mar. 2019, www.investopedia.com/terms/w/wholesale-trade.asp.
+](www.investopedia.com/terms/w/wholesale-trade.asp)
+
+[“United States Change In Labor Market Conditions Index.” United States Change In Labor Market Conditions Index | 2019 | Data | Chart, tradingeconomics.com/united-states/labor-market-conditions-index.
+](tradingeconomics.com/united-states/labor-market-conditions-index)   
    
    
    
