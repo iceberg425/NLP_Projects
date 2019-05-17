@@ -6,8 +6,10 @@
 ## Problem Statement
 
   Employing text data, we seek to:
+  
       - Predict interest rate movements
       - Explore the content of the Beige books.
+      
   That is, we want to answer the question: using the economic reports of the Federal reserve, can we predict changes in the interest rate. 
 
 
@@ -22,12 +24,14 @@
    We do not attempt to answer these questions here (they are beyond the scope of this project). Rather we seek to answer the question: *do the contents of the Beige book inform Fed policy? More precisely, does its content affect interest rate movements?* 
    
    To tackle this problem we take two broad approaches:
+   
        1. An unsupervised learning approach
        2. A supervised learning approach
    
    The data was scraped from the Minneapolis Fed [website](https://www.minneapolisfed.org/news-and-events/beige-book-archive). This data includes: 1) the beige book, 2) timestamps, and 3) Districts reports. The data on interest rates were sourced from [Macrotrends](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart). The 10 year treasury is the benchmark used to decide mortgage rates across the U.S. and is the most liquid and widely traded bond in the world. Due to the large size of the data, the dataset is not accessible on Github. However, this data can be made available upon request.
    
    We begin with a topic model, using a Latent Dirichlet Allocation (LDA) model with both Sckit-learn and Gensim libraries. The results from both LDA models are similar. We find that the optimal number of topics `n_components` is five. The keywords that arise from this analysis suggest the following topics:
+   
        1. The Primary sector
        2. Retail and Wholesale sectors
        3. Consumer Spending and Business Conditions
@@ -91,10 +95,12 @@ TL;DR
 ### Modeling and Evaluation
 
    To tackle this problem we take two broad approaches:
+   
        1. An unsupervised learning approach
        2. A supervised learning approach
    
    The unsupervised learning part of this project employed an LDA model. We implemented this model using both the Gensim and Sckit-learn libraries. Both yield similar results; that is, similar keywords were returned for each topic. We find that the optimal number of topics `n_components` is five. This was arrived at through a grid search and also looping over different coherence scores. The keywords that arise from this analysis suggest the following topics:
+   
        1. The Primary sector
        2. Retail and Wholesale sectors
        3. Consumer Spending and Business Conditions
@@ -118,28 +124,28 @@ TL;DR
     
 ### Citations
 
-[“10 Year Treasury Rate - 54 Year Historical Chart.” MacroTrends, 14 May 2019, www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart.
+1. [“10 Year Treasury Rate - 54 Year Historical Chart.” MacroTrends, 14 May 2019, www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart.
 ](https://www.macrotrends.net/2016/10-year-treasury-bond-rate-yield-chart)
 
-[“Beige Book Archive.” Federal Reserve Bank of Minneapolis, 'www.minneapolisfed.org/news-and-events/beige-book-archive.
+2. [“Beige Book Archive.” Federal Reserve Bank of Minneapolis, 'www.minneapolisfed.org/news-and-events/beige-book-archive.
 ](https://www.minneapolisfed.org/news-and-events/beige-book-archive)
 
-[Chollet, Francois. Deep Learning with Python. Manning, 2018.
+3. [Chollet, Francois. Deep Learning with Python. Manning, 2018.
 ](https://www.manning.com/books/deep-learning-with-python)
 
-[“Consumer Spending.” U.S. Bureau of Economic Analysis (BEA), www.bea.gov/resources/learning-center/what-to-know-consumer-spending.
+4. [“Consumer Spending.” U.S. Bureau of Economic Analysis (BEA), www.bea.gov/resources/learning-center/what-to-know-consumer-spending.
 ](www.bea.gov/resources/learning-center/what-to-know-consumer-spending)
 
-[Fettig, David. “The Federal Reserve's Beige Book: A Better Mirror than Crystal Ball.” Federal Reserve Bank of Minneapolis, 1 Mar. 1999, www.minneapolisfed.org/publications/the-region/the-federal-reserves-beige-book-a-better-mirror-than-crystal-ball.
+5. [Fettig, David. “The Federal Reserve's Beige Book: A Better Mirror than Crystal Ball.” Federal Reserve Bank of Minneapolis, 1 Mar. 1999, www.minneapolisfed.org/publications/the-region/the-federal-reserves-beige-book-a-better-mirror-than-crystal-ball.
 ](https://www.minneapolisfed.org/publications/the-region/the-federal-reserves-beige-book-a-better-mirror-than-crystal-ball)
 
-[James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R. Springer, 2017.
+6. [James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R. Springer, 2017.
 ](http://www-bcf.usc.edu/~gareth/ISL/)
    
-[Kenton, Will. “Wholesale Trade.” Investopedia, Investopedia, 12 Mar. 2019, www.investopedia.com/terms/w/wholesale-trade.asp.
+7. [Kenton, Will. “Wholesale Trade.” Investopedia, Investopedia, 12 Mar. 2019, www.investopedia.com/terms/w/wholesale-trade.asp.
 ](www.investopedia.com/terms/w/wholesale-trade.asp)
 
-[“United States Change In Labor Market Conditions Index.” United States Change In Labor Market Conditions Index | 2019 | Data | Chart, tradingeconomics.com/united-states/labor-market-conditions-index.
+8. [“United States Change In Labor Market Conditions Index.” United States Change In Labor Market Conditions Index | 2019 | Data | Chart, tradingeconomics.com/united-states/labor-market-conditions-index.
 ](tradingeconomics.com/united-states/labor-market-conditions-index)   
    
    
